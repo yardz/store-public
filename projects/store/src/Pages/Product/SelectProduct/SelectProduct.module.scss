@@ -1,0 +1,45 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+$info-divider: $gray-light-lab77;
+
+.sectionTitle {
+	text-align: right;
+	font-size: $font-size-base;
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+	text-transform: uppercase;
+	border: none;
+	border-top: 1px solid $info-divider;
+	background: transparent;
+	padding: 1rem 0rem;
+	margin: 0rem;
+	width: 100%;
+	display: block;
+
+	span {
+		float: left;
+	}
+	&:focus,
+	&:focus-visible {
+		outline: none;
+	}
+	&.last {
+		border-bottom: 1px solid $info-divider;
+	}
+	// &.first {
+	// 	@media (max-width: map-get($grid-breakpoints, 'lg')) {
+	// 		border-top: 0rem;
+	// 	}
+	// }
+}
+
+.space {
+	margin-bottom: 1.5rem;
+}
+
+.warpBtnMobile {
+	background: $body-bg;
+	.message {
+		padding: 1.25rem;
+	}
+}

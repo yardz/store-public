@@ -1,0 +1,8 @@
+@import '@App/Assets/bootstrap/variables.scss';
+.link {
+	text-decoration: none;
+	color: $green-lab77;
+	&:hover {
+		color: $green-lab77;
+	}
+}

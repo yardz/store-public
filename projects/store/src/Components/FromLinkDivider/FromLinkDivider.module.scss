@@ -1,0 +1,32 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '@App/Assets/stylesheets/mixins/spacing.scss';
+
+.linksWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include space(margin, top, $sm);
+	width: 100%;
+}
+
+.link {
+	font-size: $font-size-sm;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $secondary;
+	cursor: pointer;
+
+	@media (min-width: map-get($grid-breakpoints, 'lg')) {
+		font-size: $font-size-base;
+		line-height: 1.25rem;
+	}
+}
+
+.linkDivider {
+	border-left: 1px solid $secondary;
+	@include space(margin, all, 0 $sm);
+
+	&:last-child {
+		display: none;
+	}
+}

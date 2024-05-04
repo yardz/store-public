@@ -1,0 +1,24 @@
+{
+	"name": "lab77store",
+	"private": true,
+	"workspaces": [
+		"projects/*"
+	],
+	"engines": {
+		"node": "14.x"
+	},
+	"scripts": {
+		"prepare": "yarn husky install",
+		"build": "lerna run build --scope=@lab77store/database --scope=@lab77store/domain",
+		"postinstall": "yarn build",
+		"version:patch": "lerna version patch --force-publish",
+		"version:minor": "lerna version minor --force-publish",
+		"format": "lerna format",
+		"pre-commit": "lerna run pre-commit",
+		"pre-push": "lerna run pre-push"
+	},
+	"dependencies": {
+		"husky": "^5.0.6",
+		"lerna": "^4.0.0"
+	}
+}

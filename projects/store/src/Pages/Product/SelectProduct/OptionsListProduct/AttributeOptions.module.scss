@@ -1,0 +1,84 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '../SelectProduct.module.scss';
+.title {
+	@extend .sectionTitle;
+}
+.AttributeOptions {
+	display: flex;
+	border-top: 1px solid $info-divider;
+	font-family: $font-secondary-lab77;
+
+	&.tagWithDescription {
+		flex-direction: column;
+		.value {
+			width: 50%;
+		}
+		.description {
+			width: 50%;
+			padding-left: 10px;
+			text-align: left;
+		}
+	}
+
+	&.tag {
+		flex-direction: column;
+		.value {
+			width: 50%;
+		}
+		.description {
+			display: none;
+		}
+	}
+
+	&.small {
+		flex-wrap: wrap;
+		.btnTag {
+			width: (100% * 0.16666);
+			.value {
+				width: 100%;
+				padding: 10px;
+				border: 1px solid transparent;
+			}
+			.description {
+				display: none;
+			}
+			&.selected {
+				.value {
+					border: 1px solid $black-lab77;
+				}
+			}
+		}
+	}
+
+	.btnTag {
+		display: flex;
+		align-items: baseline;
+		background: none;
+		border: none;
+		margin: 0.25rem 0rem;
+		padding: 0rem;
+		width: 100%;
+		color: $gray-dark-lab77;
+
+		&.selected {
+			color: $black-lab77;
+			.value {
+				border-color: $info-divider;
+			}
+		}
+
+		&:focus,
+		&:focus-visible {
+			outline: none;
+		}
+
+		.value {
+			padding: 10px;
+			border: 1px solid $info-divider;
+		}
+		.description {
+			padding-left: 10px;
+			text-align: left;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+/node_modules
+/lib
+/database-debug.log
+/firebase-debug.log
+
+/src/tmp
+/src/database.rules.json
+/src/database.interfaces.ts

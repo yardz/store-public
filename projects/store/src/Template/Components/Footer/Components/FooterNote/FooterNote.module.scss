@@ -1,0 +1,16 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.footerNote {
+	border-top: 1px solid $gray-light-lab77;
+	padding: 1.25rem 0rem 150px;
+	@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+		padding: 1.25rem 0rem 1.25rem;
+	}
+
+	.text {
+		font-size: 0.5rem;
+		line-height: 0.75rem;
+		color: $gray-dark-lab77;
+		text-align: center;
+	}
+}

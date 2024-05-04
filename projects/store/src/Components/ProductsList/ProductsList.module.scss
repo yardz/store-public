@@ -1,0 +1,71 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.productList {
+	background: $white;
+
+	.link {
+		text-decoration: none;
+	}
+
+	.item {
+		display: block;
+		position: relative;
+		overflow: hidden;
+
+		&:hover {
+			.info {
+				bottom: 0rem;
+				transition: 0.5s;
+			}
+		}
+
+		.images {
+			position: relative;
+
+			img {
+				width: 100%;
+			}
+
+			.cover {
+				display: block;
+			}
+
+			.hover {
+				position: absolute;
+				top: 0rem;
+				opacity: 0;
+				transition: 0.5s;
+				width: 100%;
+			}
+
+			&:hover {
+				.hover {
+					opacity: 1;
+				}
+			}
+		}
+		.info {
+			position: block;
+			padding: 0.5rem 2px;
+			background-color: $white;
+			width: 100%;
+			bottom: 0rem;
+
+			@media (min-width: map-get($grid-breakpoints, 'lg')) {
+				position: absolute;
+				bottom: -70px;
+				transition: 0.5s;
+			}
+
+			.name {
+				font-weight: normal;
+				font-size: $font-size-sm;
+				color: $primary;
+			}
+			.price {
+				@extend .name;
+				margin: 0.25rem 0;
+			}
+		}
+	}
+}

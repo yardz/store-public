@@ -1,0 +1,17 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '../SelectProduct.module.scss';
+
+.ProductDetails {
+	.title {
+		@extend .sectionTitle;
+	}
+	.content {
+		color: $gray-dark-lab77;
+		border-top: 1px solid $info-divider;
+		padding: 1rem 0rem;
+		&.last {
+			border-top: 0rem;
+			border-bottom: 1px solid $info-divider;
+		}
+	}
+}

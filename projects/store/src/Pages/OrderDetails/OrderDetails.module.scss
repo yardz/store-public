@@ -1,0 +1,24 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.OrderDetailsPage {
+	.space {
+		margin-bottom: 1.5rem;
+	}
+
+	.orderStatus {
+		padding: 0.5rem;
+		text-align: center;
+		border-top: 1px solid $gray-light-lab77;
+		border-bottom: 1px solid $gray-light-lab77;
+	}
+
+	.orderCode {
+		color: $gray-dark-lab77;
+		.code {
+			color: $body-color;
+			text-transform: uppercase;
+			margin: 0rem;
+			padding: 0rem;
+		}
+	}
+}

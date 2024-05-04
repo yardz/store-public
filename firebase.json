@@ -1,0 +1,25 @@
+{
+	"database": {
+		"rules": "./projects/database/lib/database.rules.json"
+	},
+	"hosting": [
+		{
+			"target": "admin",
+			"public": "./projects/admin/build",
+			"ignore": [
+				"firebase.json",
+				"**/.*",
+				"**/node_modules/**"
+			],
+			"rewrites": [
+				{
+					"source": "**",
+					"destination": "/index.html"
+				}
+			]
+		}
+	],
+	"storage": {
+		"rules": "./projects/database/src/storage.rules"
+	}
+}

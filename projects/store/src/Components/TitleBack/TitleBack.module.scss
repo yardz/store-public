@@ -1,0 +1,24 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.TitleBack {
+	display: flex;
+	align-items: center;
+	color: $gray-dark-lab77;
+
+	padding: 0rem;
+	background: transparent;
+	border: none;
+	&:focus,
+	&:focus-visible {
+		outline: none;
+	}
+
+	.title {
+		margin-left: 10px;
+		text-transform: uppercase;
+	}
+	.icon {
+		font-size: 38px;
+		line-height: 38px;
+	}
+}

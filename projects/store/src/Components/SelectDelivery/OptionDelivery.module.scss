@@ -1,0 +1,31 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.optionDelivery {
+	color: $gray-dark-lab77;
+
+	.content {
+		display: flex;
+
+		.fakeRadio {
+			margin-top: 0.3rem;
+			margin-right: 0.5rem;
+		}
+
+		.label {
+			cursor: pointer;
+			display: inline-block;
+
+			.method {
+				display: block;
+				margin-right: 0.25rem;
+			}
+			.time {
+				display: block;
+			}
+		}
+	}
+
+	.deliveryPrice {
+		cursor: pointer;
+	}
+}

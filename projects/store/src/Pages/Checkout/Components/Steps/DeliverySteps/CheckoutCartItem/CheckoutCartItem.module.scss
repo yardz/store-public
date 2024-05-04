@@ -1,0 +1,28 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.spaceItem {
+	margin-bottom: 0rem;
+}
+
+.marginLabel {
+	margin-right: 0.5rem;
+}
+
+.checkoutCartItem {
+	padding: 0.5rem 0rem;
+	border-top: 1px solid $gray-light-lab77;
+
+	.productName {
+		display: flex;
+		justify-content: space-between;
+
+		margin: 0rem;
+		font-size: $font-size-base;
+
+		.totalValue {
+			color: $black;
+			font-weight: $font-weight-normal;
+			font-family: $font-primary-lab77;
+		}
+	}
+}

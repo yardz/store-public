@@ -1,0 +1,18 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '@App/Assets/stylesheets/mixins/spacing.scss';
+
+.LoginTemplate {
+	.header {
+		margin-bottom: 45px;
+
+		h1 {
+			color: $black-lab77;
+		}
+
+		.subTitle {
+			display: block;
+			color: $gray-dark-lab77;
+			@include space(margin, top, $sm);
+		}
+	}
+}

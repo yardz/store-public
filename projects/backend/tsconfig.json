@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"declaration": true,
+		"removeComments": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"target": "es2017",
+		"sourceMap": true,
+		"outDir": "./dist",
+		"baseUrl": "./",
+		"incremental": true,
+		"resolveJsonModule": true,
+		"strictNullChecks": true,
+		"paths": {
+			"@App/*": ["./src/*"],
+			"@Utils/*": ["./src/Utils/*"],
+			"@Modules/*": ["./src/Modules/*"]
+		},
+		"skipLibCheck": true
+	},
+	"include": ["src", "src/**/*.json"]
+}

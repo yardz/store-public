@@ -1,0 +1,88 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+$labelHeight: 1.25rem;
+
+.Input {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+
+	.input {
+		width: 100%;
+		padding: 6px 0rem 7px 0rem;
+		border: none;
+		border-bottom: 1px solid $gray-dark-lab77;
+		background-color: transparent;
+		margin-top: $labelHeight;
+
+		&:focus {
+			outline: none;
+			box-shadow: none !important;
+		}
+
+		& ~ .focusBorder {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background-color: $primary;
+			transition: 0.4s;
+		}
+		&:focus ~ .focusBorder,
+		&.hasContent ~ .focusBorder {
+			width: 100%;
+			transition: 0.4s;
+		}
+
+		& ~ label {
+			height: $labelHeight;
+			position: absolute;
+			font-size: $input-font-size;
+			left: 0;
+			top: $labelHeight;
+			color: $gray-dark-lab77;
+			cursor: text;
+			transition: 0.3s;
+		}
+
+		&:focus ~ label,
+		&.hasContent ~ label {
+			font-size: $font-size-sm;
+			top: 0rem;
+			color: $primary;
+			transition: 0.3s;
+		}
+		&.dateField ~ label {
+			top: 0rem;
+			transition: 0.3s;
+		}
+
+		/*
+		* Cores dos status
+		*/
+		&.success ~ .focusBorder {
+			background-color: $success;
+			width: 100%;
+		}
+		&.success ~ label {
+			color: $success;
+		}
+
+		&.warning ~ .focusBorder {
+			background-color: $warning;
+			width: 100%;
+		}
+		&.warning ~ label {
+			color: $warning;
+		}
+
+		&.error ~ .focusBorder {
+			background-color: $danger;
+			width: 100%;
+		}
+		&.error ~ label {
+			color: $danger;
+		}
+	}
+}

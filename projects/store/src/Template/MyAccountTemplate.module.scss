@@ -1,0 +1,28 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '@App/Assets/stylesheets/mixins/spacing.scss';
+
+.MyAccountTemplate {
+	.header {
+		margin-bottom: 2rem;
+
+		a {
+			color: $black-lab77;
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+
+			h1 {
+				margin-left: 0.25rem;
+			}
+		}
+		.icon {
+			height: 38px;
+		}
+
+		.subTitle {
+			display: block;
+			color: $gray-dark-lab77;
+			@include space(margin, top, $sm);
+		}
+	}
+}

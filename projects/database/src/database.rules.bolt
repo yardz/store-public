@@ -1,0 +1,310 @@
+/**********************************************************************
+/*      Basic types
+/**********************************************************************/
+type StringRequired extends String { validate() { this.length > 0 } }
+type UID extends StringRequired {  }
+type ID extends StringRequired;
+type CNPJ extends StringRequired;
+type CPF extends StringRequired;
+type Int extends Number { validate() { this.isNumber() && this % 1 == 0 } }
+type Positive extends Number { validate() { this >= 0 } }
+type IntegerPositive extends Int { validate() { this >= 0 } }
+type IntegerPositiveNotZero extends Int { validate() { this > 0 } }
+type IFile{
+  asset_id: String;
+  public_id: String;
+  resource_type: String;
+  url: StringRequired;
+}
+type ImageFile {
+    file: IFile;
+    alt: String | Null;
+  }
+type Image{
+  desktop: ImageFile | Null;
+  mobile: ImageFile | Null;
+}
+type Publish{
+  mobile: Boolean;
+  desktop: Boolean;
+  store: Boolean;
+  validate() { this.store.isBoolean() && this.desktop.isBoolean() && this.desktop.isBoolean() }
+}
+type Stock {
+  free: IntegerPositive;
+  locked: IntegerPositive; 
+  total: IntegerPositive;
+  validate() {
+    this.total == this.free - this.locked
+  }
+}
+
+type _female_ extends StringRequired { validate() { this == 'female' } }
+type _male_ extends StringRequired { validate() { this == 'male' } }
+type _unisex_ extends StringRequired { validate() { this == 'unisex' } }
+
+
+/**********************************************************************
+/*      Production Processes
+/**********************************************************************/
+// type ProductionProcess {
+//   name: StringRequired;
+//   time: IntegerPositive;
+//   icon: StringRequired;
+//   validate() {
+//     this.processes != null
+//   }
+// }
+
+// path /productionProcesses {
+//   read() { 
+//     (hasAbiliity('ProductionProcesses/create') || hasAbiliity('ProductionProcesses/update') || hasAbiliity('ProductionProcesses/delete')) ||
+//     ( hasAbiliity('Product/create') || hasAbiliity('Product/update') )
+//    }
+// }
+
+// path /productionProcesses/{productionProcessId} {
+//   create() { hasAbiliity('ProductionProcesses/create') }
+//   update() { hasAbiliity('ProductionProcesses/update') }
+//   delete() { hasAbiliity('ProductionProcesses/delete') }
+// }
+
+// hasProductionProcess(productionProcessId){ productionProcessId != null && root.productionProcesses[productionProcessId] != null }
+
+
+/**********************************************************************
+/*      Employees
+/**********************************************************************/
+type Employee {
+  list: Map<UID, Boolean>;
+  abilities: Map<UID, Map<String, Map<String, Boolean>>>;
+}
+
+path /employees/list {
+  read() { (hasAbiliity('Employees/create') || hasAbiliity('Employees/update') || hasAbiliity('Employees/delete')) }
+  create() { hasAbiliity('Employees/create') }
+  update() { hasAbiliity('Employees/update') }
+  delete() { hasAbiliity('Employees/delete') }
+}
+path /employees/list/{employeeId} {
+  read() { isCurrentUser(employeeId) }
+}
+
+path /employees/abilities {
+  read() { (hasAbiliity('Employees/create') || hasAbiliity('Employees/update') || hasAbiliity('Employees/delete')) }
+  create() { hasAbiliity('Employees/create') }
+  update() { hasAbiliity('Employees/update') }
+  delete() { hasAbiliity('Employees/delete') }
+}
+path /employees/abilities/{employeeId} {
+  read() { isCurrentUser(employeeId) }
+}
+
+isEmployee(uid){ uid != null && root.employees.list[uid] == true }
+hasAbiliity(ability){ isAuth() && isEmployee(auth.uid) && root.employees.abilities[auth.uid][ability] == true }
+
+
+/**********************************************************************
+/*      Tags
+/**********************************************************************/
+// type Tag {
+//   name: StringRequired;
+// }
+
+// path /tags {
+//   read() { true }
+// }
+
+// path /tags/{tagId} {
+//   create() { hasAbiliity('Tags/create') }
+//   update() { hasAbiliity('Tags/update') }
+//   delete() { hasAbiliity('Tags/delete') }
+// }
+
+// hasTag(tagId){ tagId != null && root.tags[tagId] != null }
+
+/**********************************************************************
+/*      Collections
+/**********************************************************************/
+// type Collection {
+//   name: StringRequired;
+// }
+
+// path /collections {
+//   read() {
+//     (hasAbiliity('Collections/create') || hasAbiliity('Collections/update') || hasAbiliity('Collections/delete')) ||
+//     ( hasAbiliity('Product/create') || hasAbiliity('Product/update') )
+//   }
+// }
+
+// path /collections/{collectionId} {
+//   create() { hasAbiliity('Collections/create') }
+//   update() { hasAbiliity('Collections/update') }
+//   delete() { hasAbiliity('Collections/delete') }
+// }
+
+// hasCollection(collectionId){ collectionId != null && root.collections[collectionId] != null }
+
+
+/**********************************************************************
+/*      Flags
+/**********************************************************************/
+// type Flag {
+//   name: StringRequired;
+//   image: Image;
+// }
+
+// path /flags {
+//   read() {
+//     (hasAbiliity('Flags/create') || hasAbiliity('Flags/update') || hasAbiliity('Flags/delete')) ||
+//     ( hasAbiliity('Product/create') || hasAbiliity('Product/update') )
+//   }
+// }
+
+// path /flags/{flagId} {
+//   read() { true }
+//   create() { hasAbiliity('Flags/create') }
+//   update() { hasAbiliity('Flags/update') }
+//   delete() { hasAbiliity('Flags/delete') }
+// }
+
+// hasFlag(flagId){ flagId != null && root.flags[flagId] != null }
+
+/**********************************************************************
+/*      Production
+/**********************************************************************/
+
+// type ProductionMaterial{
+//   amount: IntegerPositiveNotZero;
+//   rawMaterialId: ID;
+//   validate() {
+//     hasRawMaterial(this.rawMaterialId)
+//   }
+// }
+
+// type Production {
+//   productionProcessId: StringRequired;
+//   produce: IntegerPositiveNotZero;
+//   materials: ProductionMaterial[];
+//   validate() {
+//     this.materials != null && hasProductionProcess(this.productionProcessId)
+//   }
+// }
+
+/**********************************************************************
+/*      Raw Materials
+/**********************************************************************/
+// type RawMaterial{
+//   name: StringRequired;
+//   stock: Stock;
+//   price: IntegerPositive;
+//   production: Production | Null;
+// }
+
+// path /rawMaterials {
+//   read() {
+//     ( hasAbiliity('RawMaterials/create') || hasAbiliity('RawMaterials/update') || hasAbiliity('RawMaterials/delete') ) ||
+//     ( hasAbiliity('Product/create') || hasAbiliity('Product/update') )
+//   }
+// }
+
+// path /rawMaterials/{rawMeterialId} {
+//   read() { true }
+//   create() { hasAbiliity('RawMaterials/create') }
+//   update() { hasAbiliity('RawMaterials/update') }
+//   delete() { hasAbiliity('RawMaterials/delete') }
+// }
+
+// hasRawMaterial(rawMaterialId){ rawMaterialId != null && root.rawMaterials[rawMaterialId] != null }
+
+/**********************************************************************
+/*      Carts
+/**********************************************************************/
+
+
+type OrderDelivery {
+	_id: String;
+	price: Positive;
+	deliveryTime: Positive;
+	zipCode: String;
+}
+
+type OrderCoupon {
+	code: String;
+	value: Positive | Null;
+	percent: Positive | Null;
+}
+
+type AttributeItemCart{
+  name: StringRequired;
+  value: StringRequired;
+}
+
+type CartItem {
+  name: StringRequired;
+  ref: StringRequired;
+  productId: StringRequired;
+  variationId: StringRequired;
+  price: Positive;
+  quantity: IntegerPositiveNotZero;
+  stock: IntegerPositiveNotZero;
+  attributes: AttributeItemCart[];
+  image: Image;
+}
+
+type Cart{
+  items: CartItem[];
+  orderCoupon: OrderCoupon | Null;
+  orderDelivery: OrderDelivery | Null;
+}
+
+path /carts {
+  delete() { hasAbiliity('Carts/delete') }
+}
+
+path /carts/{uid} is Cart {
+  read() { isCurrentUser(uid) }
+  write() { isCurrentUser(uid) }
+}
+
+/**********************************************************************
+/*      Database
+/**********************************************************************/
+type Database {
+  carts: Cart[];
+  employees: Employee;
+}
+
+// Esses outros campos são legados.
+// type Database {
+  // authorization: Authorization[];
+//   employees: Employee;
+//   rawMaterials: RawMaterial[];
+//   products: Product[];
+//   variations: Variation[];
+//   places: Place[];
+//   banners: Banner[];
+//   sliders: Slider[];
+//   productionProcesses: ProductionProcess[];
+//   tags: Tag[];
+//   attributes: Attribute[];
+//   categories: CategoryDataStructure[];
+//   collections: Collection[];
+//   flags: Flag[];
+//   measuresTable: MeasuresTable[];
+//   coupon: Coupon[];
+
+//   users: User[];
+//   tokens: Map<UID,Token[]>;
+//   businessInformation: BusinessInformation[];
+// }
+
+path / is Database {}
+
+
+/**********************************************************************
+/*      Generic Functions
+/**********************************************************************/
+isCurrentUser(uid){ auth != null && auth.uid == uid }
+isAuth() { auth != null }
+hasFilter(fieldName) { query.orderByChild == fieldName && query.equalTo != null }

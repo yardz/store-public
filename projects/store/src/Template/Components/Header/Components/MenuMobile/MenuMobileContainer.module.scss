@@ -1,0 +1,41 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+$menuWidth: 90%;
+
+.menuList {
+	list-style: none;
+	padding: 0rem;
+	margin: 0rem;
+}
+.menuItem {
+	border-top: 1px solid $gray-light-lab77;
+	padding: 0.5rem 0rem;
+	display: block;
+}
+
+.MenuMobileContainer {
+	position: fixed;
+	z-index: 200;
+	max-height: 80vh;
+	padding: 0rem;
+	background: $white-lab77;
+	box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+	color: $primary;
+	width: 12.5remst;
+	overflow: hidden;
+
+	left: calc(-100% + -10px);
+	top: $header-height-mobile;
+	transition: 0.5s;
+	transition-timing-function: cubic-bezier(0.77, 0.2, 0.05, 1);
+	&.show {
+		left: 0rem;
+		transition: 0.5s;
+		transition-timing-function: cubic-bezier(0.77, 0.2, 0.05, 1);
+	}
+
+	@media screen and (max-width: map-get($grid-breakpoints, 'lg')) {
+		overflow: scroll !important;
+		width: $menuWidth !important;
+	}
+}

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "prod": "store-lab77"
+  },
+  "targets": {
+    "store-lab77": {
+      "hosting": {
+        "admin": [
+          "store-lab77"
+        ]
+      }
+    }
+  }
+}

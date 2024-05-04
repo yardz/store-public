@@ -1,0 +1,17 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '@App/Assets/stylesheets/_global.scss';
+@import '../GlobalSteps.module.scss';
+
+.PersonalDataStep {
+	.space {
+		@extend .pageSpace;
+	}
+
+	.spaceSmall {
+		margin-bottom: 5px;
+	}
+
+	.darkText {
+		color: $body-color;
+	}
+}

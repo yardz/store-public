@@ -1,0 +1,18 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.body {
+	max-width: 1680px;
+	margin: 0 auto;
+
+	padding: $header-height-mobile + 47px 0rem 70px 0rem;
+	@media (min-width: map-get($grid-breakpoints, 'lg')) {
+		padding: $header-height-desktop + 47px 0rem 70px 0rem;
+	}
+
+	&.compact {
+		padding: $header-height-mobile 0rem 70px 0rem;
+		@media (min-width: map-get($grid-breakpoints, 'lg')) {
+			padding: $header-height-desktop 0rem 70px 0rem;
+		}
+	}
+}

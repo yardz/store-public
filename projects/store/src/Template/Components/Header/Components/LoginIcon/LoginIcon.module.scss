@@ -1,0 +1,14 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '../../Header.module.scss';
+
+.loginContent {
+	color: $white;
+	&.active {
+		color: $green-lab77;
+	}
+	@extend .menuIcon;
+
+	@media screen and (max-width: map-get($grid-breakpoints, 'lg')) {
+		margin-right: 0.75rem;
+	}
+}

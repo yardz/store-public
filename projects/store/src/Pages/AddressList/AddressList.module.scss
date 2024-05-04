@@ -1,0 +1,6 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '@App/Assets/stylesheets/mixins/spacing.scss';
+
+.linkBtn {
+	@include space(margin, top, $xl);
+}

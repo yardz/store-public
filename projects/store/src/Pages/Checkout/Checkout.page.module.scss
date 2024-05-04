@@ -1,0 +1,25 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.header {
+	border-bottom: 1px solid $gray-light-lab77;
+	padding: 1.5rem 0rem 1rem;
+}
+
+.contentArea {
+	margin-bottom: 70px;
+}
+
+.footer {
+	background: $body-bg;
+	width: 100%;
+	position: fixed;
+	bottom: 0rem;
+	left: 0rem;
+	border-top: 1px solid $gray-light-lab77;
+	padding: 0.5rem 0rem 0rem;
+	z-index: 100;
+
+	&.ios {
+		padding-bottom: 2rem;
+	}
+}

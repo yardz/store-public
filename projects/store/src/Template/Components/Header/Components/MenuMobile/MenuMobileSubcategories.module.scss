@@ -1,0 +1,34 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import './MenuMobileContainer.module.scss';
+
+.MenuMobileItem {
+	button {
+		@extend .menuItem;
+		background-color: transparent;
+		border-left: none;
+		border-right: none;
+		border-bottom: none;
+		cursor: pointer;
+		width: 100%;
+		// text-align: left;
+		color: black !important;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&:focus,
+		&:focus-visible {
+			outline: none;
+		}
+
+		.icon {
+			padding-right: 0.5rem;
+			font-size: 1.5rem;
+			line-height: 1rem;
+		}
+	}
+
+	.list {
+		@extend .menuList;
+	}
+}

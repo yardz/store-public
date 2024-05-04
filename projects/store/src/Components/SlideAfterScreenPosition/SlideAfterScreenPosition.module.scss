@@ -1,0 +1,11 @@
+.SlideAfterScreenPosition {
+	position: relative;
+	width: 100%;
+
+	.fixed {
+		position: fixed;
+	}
+	.fixedBottom {
+		position: absolute;
+	}
+}

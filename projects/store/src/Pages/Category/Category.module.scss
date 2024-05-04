@@ -1,0 +1,11 @@
+@import '@App/Assets/stylesheets/mixins/spacing.scss';
+@import '@App/Assets/bootstrap/variables.scss';
+
+.space {
+	@include space(margin, bottom, calc(#{$xs} / 2));
+	@include space(padding, all, 0);
+}
+
+.textSeo {
+	font-size: 0.5rem;
+}

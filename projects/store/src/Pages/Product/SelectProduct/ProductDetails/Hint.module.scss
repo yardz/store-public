@@ -1,0 +1,12 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.hint {
+	display: flex;
+	align-items: center;
+	margin: 0.75rem 0rem;
+	.text {
+		color: $black-lab77;
+		text-transform: uppercase;
+		margin-left: 0.25rem;
+	}
+}

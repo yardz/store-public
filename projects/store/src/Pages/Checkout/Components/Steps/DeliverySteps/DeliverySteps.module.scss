@@ -1,0 +1,18 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '../GlobalSteps.module.scss';
+
+.loading {
+	text-align: center;
+	font-size: 4rem;
+}
+
+.DeliverySteps {
+	.title {
+		padding-bottom: 1rem;
+		border-bottom: 1px solid $gray-dark-lab77;
+	}
+
+	.space {
+		@extend .pageSpace;
+	}
+}

@@ -1,0 +1,347 @@
+[
+    {
+        "name": "MASCULINO",
+        "parent": "",
+        "ref": "masculino"
+    },
+    {
+        "name": "FEMININO",
+        "parent": "",
+        "ref": "feminino"
+    },
+    {
+        "name": "NOVIDADES",
+        "parent": "",
+        "ref": "novidades"
+    },
+    {
+        "name": "MAIS VENDIDOS",
+        "parent": "",
+        "ref": "mais-vendidos"
+    },
+    {
+        "name": "COLEÇÃO",
+        "parent": "",
+        "ref": "colecao"
+    },
+    {
+        "name": "PERSONALIZAÇÃO",
+        "parent": "",
+        "ref": "personalizacao"
+    },
+    {
+        "name": "ACESSÓRIOS",
+        "parent": "masculino",
+        "ref": "acessorios-masculino"
+    },
+    {
+        "name": "BERMUDAS",
+        "parent": "masculino",
+        "ref": "bermudas-masculino"
+    },
+    {
+        "name": "CALÇAS",
+        "parent": "masculino",
+        "ref": "calcas-masculino"
+    },
+    {
+        "name": "CAMISAS",
+        "parent": "masculino",
+        "ref": "camisas-masculino"
+    },
+    {
+        "name": "CAMISETA ESTAMPADAS",
+        "parent": "masculino",
+        "ref": "camiseta-estampadas-masculino"
+    },
+    {
+        "name": "CAMISETA MOLETOM",
+        "parent": "masculino",
+        "ref": "camiseta-moletom-masculino"
+    },
+    {
+        "name": "CAMISETAS BÁSICAS",
+        "parent": "masculino",
+        "ref": "camisetas-basicas-masculino"
+    },
+    {
+        "name": "CASACOS",
+        "parent": "masculino",
+        "ref": "casacos-masculino"
+    },
+    {
+        "name": "CONJUNTOS",
+        "parent": "masculino",
+        "ref": "conjuntos-masculino"
+    },
+    {
+        "name": "REGATAS",
+        "parent": "masculino",
+        "ref": "regatas-masculino"
+    },
+    {
+        "name": "ANIMAIS",
+        "parent": "camiseta-estampadas-masculino",
+        "ref": "animais-camiseta-estampadas-masculino"
+    },
+    {
+        "name": "ARTE",
+        "parent": "camiseta-estampadas-masculino",
+        "ref": "arte-camiseta-estampadas-masculino"
+    },
+    {
+        "name": "CARNAVAL",
+        "parent": "camiseta-estampadas-masculino",
+        "ref": "carnaval-camiseta-estampadas-masculino"
+    },
+    {
+        "name": "DA PRAIA",
+        "parent": "camiseta-estampadas-masculino",
+        "ref": "da-praia-camiseta-estampadas-masculino"
+    },
+    {
+        "name": "DA RUA",
+        "parent": "camiseta-estampadas-masculino",
+        "ref": "da-rua-camiseta-estampadas-masculino"
+    },
+    {
+        "name": "FILMES",
+        "parent": "camiseta-estampadas-masculino",
+        "ref": "filmes-camiseta-estampadas-masculino"
+    },
+    {
+        "name": "FOTOGRAFIA",
+        "parent": "camiseta-estampadas-masculino",
+        "ref": "fotografia-camiseta-estampadas-masculino"
+    },
+    {
+        "name": "GRL PWR",
+        "parent": "camiseta-estampadas-masculino",
+        "ref": "grl-pwr-camiseta-estampadas-masculino"
+    },
+    {
+        "name": "MÚSICAS",
+        "parent": "camiseta-estampadas-masculino",
+        "ref": "musicas-camiseta-estampadas-masculino"
+    },
+    {
+        "name": "SAMPLE",
+        "parent": "camiseta-estampadas-masculino",
+        "ref": "sample-camiseta-estampadas-masculino"
+    },
+    {
+        "name": "SUSTENTABILIDADE",
+        "parent": "camiseta-estampadas-masculino",
+        "ref": "sustentabilidade-camiseta-estampadas-masculino"
+    },
+    {
+        "name": "VEGANISMO",
+        "parent": "camiseta-estampadas-masculino",
+        "ref": "veganismo-camiseta-estampadas-masculino"
+    },
+    {
+        "name": "ZODÍACO",
+        "parent": "camiseta-estampadas-masculino",
+        "ref": "zodiaco-camiseta-estampadas-masculino"
+    },
+    {
+        "name": "ACESSÓRIOS",
+        "parent": "feminino",
+        "ref": "acessorios-feminino"
+    },
+    {
+        "name": "BERMUDAS",
+        "parent": "feminino",
+        "ref": "bermudas-feminino"
+    },
+    {
+        "name": "BODY",
+        "parent": "feminino",
+        "ref": "body-feminino"
+    },
+    {
+        "name": "CALÇAS",
+        "parent": "feminino",
+        "ref": "calcas-feminino"
+    },
+    {
+        "name": "CAMISAS",
+        "parent": "feminino",
+        "ref": "camisas-feminino"
+    },
+    {
+        "name": "CAMISETA ESTAMPADAS",
+        "parent": "feminino",
+        "ref": "camiseta-estampadas-feminino"
+    },
+    {
+        "name": "CAMISETA MOLETOM",
+        "parent": "feminino",
+        "ref": "camiseta-moletom-feminino"
+    },
+    {
+        "name": "CAMISETAS BÁSICAS",
+        "parent": "feminino",
+        "ref": "camisetas-basicas-feminino"
+    },
+    {
+        "name": "CASACOS",
+        "parent": "feminino",
+        "ref": "casacos-feminino"
+    },
+    {
+        "name": "CONJUNTOS",
+        "parent": "feminino",
+        "ref": "conjuntos-feminino"
+    },
+    {
+        "name": "CROPPED",
+        "parent": "feminino",
+        "ref": "cropped-feminino"
+    },
+    {
+        "name": "HOT PANT",
+        "parent": "feminino",
+        "ref": "Hot-pant-feminino"
+    },
+    {
+        "name": "REGATAS",
+        "parent": "feminino",
+        "ref": "regatas-feminino"
+    },
+    {
+        "name": "SAIAS",
+        "parent": "feminino",
+        "ref": "saias-feminino"
+    },
+    {
+        "name": "SHORTS",
+        "parent": "feminino",
+        "ref": "shorts-feminino"
+    },
+    {
+        "name": "TOPS",
+        "parent": "feminino",
+        "ref": "tops-feminino"
+    },
+    {
+        "name": "ANIMAIS",
+        "parent": "camiseta-estampadas-feminino",
+        "ref": "animais-camiseta-estampadas-feminino"
+    },
+    {
+        "name": "ARTE",
+        "parent": "camiseta-estampadas-feminino",
+        "ref": "arte-camiseta-estampadas-feminino"
+    },
+    {
+        "name": "CARNAVAL",
+        "parent": "camiseta-estampadas-feminino",
+        "ref": "carnaval-camiseta-estampadas-feminino"
+    },
+    {
+        "name": "DA PRAIA",
+        "parent": "camiseta-estampadas-feminino",
+        "ref": "da-praia-camiseta-estampadas-feminino"
+    },
+    {
+        "name": "DA RUA",
+        "parent": "camiseta-estampadas-feminino",
+        "ref": "da-rua-camiseta-estampadas-feminino"
+    },
+    {
+        "name": "FILMES",
+        "parent": "camiseta-estampadas-feminino",
+        "ref": "filmes-camiseta-estampadas-feminino"
+    },
+    {
+        "name": "FOTOGRAFIA",
+        "parent": "camiseta-estampadas-feminino",
+        "ref": "fotografia-camiseta-estampadas-feminino"
+    },
+    {
+        "name": "GRL PWR",
+        "parent": "camiseta-estampadas-feminino",
+        "ref": "grl-pwr-camiseta-estampadas-feminino"
+    },
+    {
+        "name": "MÚSICAS",
+        "parent": "camiseta-estampadas-feminino",
+        "ref": "musicas-camiseta-estampadas-feminino"
+    },
+    {
+        "name": "SAMPLE",
+        "parent": "camiseta-estampadas-feminino",
+        "ref": "sample-camiseta-estampadas-feminino"
+    },
+    {
+        "name": "SUSTENTABILIDADE",
+        "parent": "camiseta-estampadas-feminino",
+        "ref": "sustentabilidade-camiseta-estampadas-feminino"
+    },
+    {
+        "name": "VEGANISMO",
+        "parent": "camiseta-estampadas-feminino",
+        "ref": "veganismo-camiseta-estampadas-feminino"
+    },
+    {
+        "name": "ZODÍACO",
+        "parent": "camiseta-estampadas-feminino",
+        "ref": "zodiaco-camiseta-estampadas-feminino"
+    },
+    {
+        "name": "CAMISAS ECO",
+        "parent": "novidades",
+        "ref": "camisas-eco-novidades"
+    },
+    {
+        "name": "SHORT GRUMARI",
+        "parent": "novidades",
+        "ref": "short-grumari-novidades"
+    },
+    {
+        "name": "CONJUNTOS",
+        "parent": "novidades",
+        "ref": "conjuntos-novidades"
+    },
+    {
+        "name": "CAMISETAS",
+        "parent": "novidades",
+        "ref": "camisetas-novidades"
+    },
+    {
+        "name": "JOHNNIE WALKER",
+        "parent": "colecao",
+        "ref": "johnnie-walker-colecao"
+    },
+    {
+        "name": "REBOOT SEASON",
+        "parent": "colecao",
+        "ref": "reboot-season-colecao"
+    },
+    {
+        "name": "GO VEGAN",
+        "parent": "colecao",
+        "ref": "go-vegan-colecao"
+    },
+    {
+        "name": "ZODÍACO",
+        "parent": "colecao",
+        "ref": "zodiaco-colecao"
+    },
+    {
+        "name": "CAMISETAS",
+        "parent": "personalizacao",
+        "ref": "camisetas-personalizacao"
+    },
+    {
+        "name": "MOLETOM",
+        "parent": "personalizacao",
+        "ref": "moletom-personalizacao"
+    },
+    {
+        "name": "BODY",
+        "parent": "personalizacao",
+        "ref": "body-personalizacao"
+    }
+]

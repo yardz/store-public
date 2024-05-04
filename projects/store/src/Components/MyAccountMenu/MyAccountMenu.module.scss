@@ -1,0 +1,16 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.ul {
+	padding: 0rem;
+
+	.MenuItem {
+		height: 65px;
+		margin: 0rem 0rem 24px 0rem;
+		list-style: none;
+		border-bottom: 1px solid $gray-dark-lab77;
+
+		.link {
+			text-decoration: none;
+		}
+	}
+}

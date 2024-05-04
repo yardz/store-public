@@ -1,0 +1,6 @@
+@import '@App/Assets/stylesheets/mixins/spacing.scss';
+
+.space {
+	@include space(margin, bottom, calc(#{$xs} / 2));
+	@include space(padding, all, 0);
+}

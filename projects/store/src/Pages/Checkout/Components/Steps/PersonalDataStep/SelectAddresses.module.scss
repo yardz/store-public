@@ -1,0 +1,7 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '@App/Assets/stylesheets/_global.scss';
+@import '../GlobalSteps.module.scss';
+
+.space {
+	@extend .pageSpace;
+}

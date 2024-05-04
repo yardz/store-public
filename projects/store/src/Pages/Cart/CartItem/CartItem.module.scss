@@ -1,0 +1,81 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.spaceItem {
+	// margin-bottom: 1rem;
+	margin-bottom: 0rem;
+	@media (max-width: map-get($grid-breakpoints, 'lg')) {
+		margin-bottom: 0rem;
+	}
+}
+
+.marginLabel {
+	// margin-right: 1.5rem;
+	margin-right: 0.5rem;
+	@media (max-width: map-get($grid-breakpoints, 'lg')) {
+		margin-right: 0.5rem;
+	}
+}
+
+.cartItem {
+	border-top: 1px solid $gray-light-lab77;
+	border-bottom: 1px solid $gray-light-lab77;
+	.link {
+		text-decoration: none;
+		.productName {
+			@media (min-width: map-get($grid-breakpoints, 'lg')) {
+				margin-bottom: 30px;
+				display: block;
+			}
+		}
+	}
+
+	.wrapperCartItemInfo {
+		display: flex;
+		height: 100%;
+	}
+
+	.cartItemInfo {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		.content {
+			padding: 30px;
+			@media (max-width: map-get($grid-breakpoints, 'lg')) {
+				padding: 0.5rem;
+			}
+		}
+
+		.subtotal {
+			border-top: 1px solid $gray-light-lab77;
+			margin-top: auto;
+			padding: 1rem;
+			color: $gray-dark-lab77;
+			@media (max-width: map-get($grid-breakpoints, 'lg')) {
+				padding: 1rem 0.5rem;
+			}
+
+			.totalValue {
+				color: $black;
+				font-weight: $font-weight-bold;
+				margin-right: 54px;
+				@media (max-width: map-get($grid-breakpoints, 'lg')) {
+					margin-right: 0.5rem;
+				}
+			}
+		}
+	}
+
+	.btnRemoveItem {
+		background: none;
+		color: $teal;
+		border: none;
+		font: inherit;
+		cursor: pointer;
+		outline: inherit;
+		padding: 0;
+		margin-right: 2.5rem;
+		@media (max-width: map-get($grid-breakpoints, 'lg')) {
+			margin-right: 0.5rem;
+		}
+	}
+}

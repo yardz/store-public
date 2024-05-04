@@ -1,0 +1,21 @@
+// Layout & components
+@import 'global';
+
+// Mixins
+@import 'mixins/spacing';
+@import 'header-menu';
+
+.btn {
+	&.btn-success {
+		color: $white-lab77;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: uppercase;
+}

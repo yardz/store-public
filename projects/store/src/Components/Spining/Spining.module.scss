@@ -1,0 +1,17 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.Spining {
+	position: fixed;
+	top: 0rem;
+	right: 0rem;
+	width: 100%;
+	height: 100vh;
+	z-index: 1000;
+
+	background: $black-lab77;
+	color: $white-lab77;
+	min-height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

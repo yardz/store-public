@@ -1,0 +1,8 @@
+@import '@App/Assets/bootstrap/variables.scss';
+.GoToCheckoutDesktop {
+	border-top: 1px solid $gray-dark-lab77;
+	background: $gray-light-lab77;
+	.checkoutResume {
+		padding: 1rem;
+	}
+}

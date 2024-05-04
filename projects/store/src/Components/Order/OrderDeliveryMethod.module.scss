@@ -1,0 +1,16 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.OrderDeliveryMethod {
+	color: $gray-dark-lab77;
+	.content {
+		display: flex;
+		align-items: flex-start;
+
+		.icon {
+			font-size: 50px;
+			line-height: 50px;
+			margin-right: 10px;
+			color: $gray-dark-lab77;
+		}
+	}
+}

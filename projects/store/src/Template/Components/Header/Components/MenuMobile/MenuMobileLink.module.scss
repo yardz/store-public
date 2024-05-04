@@ -1,0 +1,8 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import './MenuMobileContainer.module.scss';
+
+.MenuMobileLink {
+	@extend .menuItem;
+	text-decoration: none;
+	text-transform: uppercase;
+}

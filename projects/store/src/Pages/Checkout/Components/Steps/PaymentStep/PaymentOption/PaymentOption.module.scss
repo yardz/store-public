@@ -1,0 +1,51 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.PaymentOption {
+	width: 100%;
+	background-color: transparent;
+	padding: 1rem;
+	border: 1px solid $gray-light-lab77;
+	margin-bottom: 1rem;
+	text-align: left;
+
+	&:focus,
+	&:focus-visible {
+		outline: none;
+	}
+
+	.header {
+		display: flex;
+		align-items: flex-start;
+
+		.icon {
+			font-size: 3rem;
+			line-height: 3rem;
+			margin-right: 10px;
+			color: $gray-dark-lab77;
+		}
+		.title {
+			color: $gray-dark-lab77;
+		}
+		.description {
+			color: $gray-dark-lab77;
+		}
+	}
+
+	.content {
+		margin-top: 1rem;
+	}
+
+	&:hover,
+	&.active {
+		border-color: $gray-dark-lab77;
+		.icon {
+			color: initial;
+		}
+		.title {
+			color: initial;
+		}
+		.description {
+			color: initial;
+		}
+	}
+}

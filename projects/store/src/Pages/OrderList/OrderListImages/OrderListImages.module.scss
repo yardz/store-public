@@ -1,0 +1,11 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '@App/Assets/stylesheets/_global.scss';
+
+.AppendImage {
+	width: 80px;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid $gray-dark-lab77;
+}

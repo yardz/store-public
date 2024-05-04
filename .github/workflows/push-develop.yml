@@ -1,0 +1,62 @@
+name: Develop
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  # tests:
+  #   name: Tests
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     # Setup
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
+  #     - name: Setup Node.js
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 14.x
+  #         registry-url: "https://npm.pkg.github.com"
+  #         scope: "@lab77store"
+  #     - name: Setup firebase-admin-key
+  #       run: cd projects/backend && echo "$SSH_KEY" > firebase-admin-key.json
+  #       env:
+  #         SSH_KEY: ${{ secrets.FIREBASE_ADMIN_KEY }}
+  #     - name: Setup Database
+  #       run: cd projects/backend && docker-compose up -d
+  #     # Install
+  #     - name: Install Packages
+  #       run: yarn
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #     # Tests
+  #     - name: "Tests: Backend"
+  #       run: cd projects/backend && yarn test:all
+  #     # - name: "Tests: Admin"
+  #     #   run: cd projects/admin && yarn test:all
+  #     # # Build
+  #     # - name: Build
+  #     #   run: lerna run build --scope=@lab77store/admin
+  #     # # Deploy
+  #     # - name: "Deploy Firebase"
+  #     #   run: npx firebase deploy --only database,hosting --token ${{ secrets.FIREBASE_KEY_DEPLOY }}
+
+  deploy-backend:
+    name: "Deploy Heroku"
+    runs-on: ubuntu-latest
+    # needs: tests
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: "Deploy Heroku"
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "develop-store-lab77" # Esse é o app de dev. Atenção para não trocar isso!
+          heroku_email: "wadge.motta@gmail.com"
+          team: "lab77"
+          appdir: "projects/backend"
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ./firebase-admin-key.json
+          NPMRC: //registry.npmjs.org/:_authToken=00000000-0000-0000-0000-000000000000

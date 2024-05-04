@@ -1,0 +1,39 @@
+@import '@App/Assets/stylesheets/mixins/spacing.scss';
+@import '@App/Assets/bootstrap/variables.scss';
+
+.space {
+	@include space(margin, bottom, calc(#{$xs} / 2));
+	@include space(padding, all, 0);
+}
+
+.textSeo {
+	font-size: 0.5rem;
+}
+
+.LockerPage {
+	.lokpageBG {
+		background-color: #f3f3eb;
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+		height: 100vh;
+	}
+
+	.inputSection {
+		margin: auto;
+		width: 15rem;
+		padding: 0.4rem;
+
+		input {
+			background-color: white;
+		}
+	}
+	@media (max-width: map-get($grid-breakpoints, 'lg')) {
+		.lokpageBG {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+		.inputSection {
+			width: 16rem;
+		}
+	}
+}

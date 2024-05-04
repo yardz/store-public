@@ -1,0 +1,30 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.cart {
+	position: relative;
+	margin-top: 0rem;
+
+	svg {
+		width: auto;
+		height: 1rem;
+		top: -0.1rem;
+		position: relative;
+		@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+			height: 1.1rem;
+		}
+	}
+
+	* {
+		transition: 0.3s;
+	}
+	&.minus {
+		* {
+			fill: $yellow-lab77;
+		}
+	}
+	&.plus {
+		* {
+			fill: $green-lab77;
+		}
+	}
+}

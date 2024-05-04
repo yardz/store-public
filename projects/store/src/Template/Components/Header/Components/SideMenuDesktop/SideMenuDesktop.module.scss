@@ -1,0 +1,15 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.SideMenuDesktop {
+	* {
+		font-family: $font-secondary-lab77;
+		text-transform: uppercase;
+	}
+	.linkSideMenu {
+		color: white;
+		padding-bottom: 0.4rem;
+	}
+	li {
+		border-bottom: 1px solid #f2f2f2;
+	}
+}

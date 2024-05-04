@@ -1,0 +1,12 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.btn {
+	border: none;
+	background: none;
+	outline: none !important;
+	font-size: $h6-font-size;
+	margin: 0rem;
+	padding: 0rem;
+	width: 100%;
+	text-align: inherit;
+}

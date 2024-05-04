@@ -1,0 +1,55 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '@App/Assets/stylesheets/mixins/spacing.scss';
+
+.footerMenu {
+	.menu {
+		display: flex;
+		list-style: none;
+		justify-content: center;
+		margin: 0rem;
+		padding: 0rem;
+
+		@media screen and (max-width: map-get($grid-breakpoints, 'lg')) {
+			flex-direction: column;
+		}
+
+		.item {
+			padding: 0rem 1rem;
+			border-right: 1px solid $black;
+			text-transform: uppercase;
+			font-family: $font-secondary-lab77;
+
+			&:last-child {
+				border-right: none;
+			}
+
+			@media screen and (max-width: map-get($grid-breakpoints, 'lg')) {
+				border-top: 1px solid $gray-500;
+				border-right: none;
+				padding: 10px 1rem;
+
+				&:last-child {
+					border-bottom: 1px solid $gray-500;
+				}
+			}
+		}
+
+		a {
+			color: $primary;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-weight: 100;
+			&:hover,
+			&:active,
+			&:focus {
+				font-weight: 400;
+				color: $secondary;
+			}
+		}
+	}
+
+	// .link {
+	// 	border-top: 1px solid $gray-300;
+	// 	@include space(padding, all, $xs 0 $xs 0);
+	// }
+}

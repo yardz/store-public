@@ -1,0 +1,35 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.orderItem {
+	border-top: 1px solid $gray-light-lab77;
+	color: $gray-dark-lab77;
+	&:last-child {
+		border-bottom: 1px solid $gray-light-lab77;
+	}
+
+	.body {
+		position: relative;
+		min-height: 100%;
+		.content {
+			padding: 1rem;
+			margin-bottom: 51px;
+			@media (max-width: map-get($grid-breakpoints, 'lg')) {
+				padding-top: 0rem;
+			}
+			.title {
+				margin: 0rem 0rem 1.25rem 0rem;
+				color: $black;
+				@media (max-width: map-get($grid-breakpoints, 'lg')) {
+					margin-bottom: 0rem;
+				}
+			}
+		}
+		.subtotal {
+			position: absolute;
+			width: 100%;
+			bottom: 0rem;
+			border-top: 1px solid $gray-light-lab77;
+			padding: 1rem;
+		}
+	}
+}

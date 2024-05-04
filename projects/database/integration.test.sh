@@ -1,0 +1,1 @@
+curl -X PUT -H 'Authorization: Bearer owner' --data @lib/database.rules.json http://localhost:9000/.settings/rules.json?ns=db

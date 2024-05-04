@@ -1,0 +1,14 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+#store-template-header {
+	.navbar-nav {
+		.dropdown-menu {
+			li {
+				border-bottom: 1px solid $gray-light-lab77;
+				&:first-child {
+					border-top: 1px solid $gray-light-lab77;
+				}
+			}
+		}
+	}
+}

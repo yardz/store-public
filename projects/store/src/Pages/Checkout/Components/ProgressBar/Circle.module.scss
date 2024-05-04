@@ -1,0 +1,10 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.circle {
+	border-radius: 100%;
+	background-color: $gray-dark-lab77;
+
+	&.active {
+		background-color: $green-lab77;
+	}
+}

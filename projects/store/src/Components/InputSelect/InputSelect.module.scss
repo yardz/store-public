@@ -1,0 +1,89 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+$labelHeight: 1.25rem;
+
+.Select {
+	width: 100%;
+	position: relative;
+
+	.input {
+		width: 100%;
+		padding: 0.3rem 0rem 0.5rem 0rem;
+		border: none;
+		border-right: 2rem solid blue;
+		background-color: transparent;
+		margin-top: $labelHeight;
+		appearance: none;
+		border-radius: 0rem;
+		cursor: pointer;
+
+		border-image: url('/images/btn-pointer.png') 0 153 0 0 round;
+
+		&:focus {
+			outline: none;
+			box-shadow: none !important;
+		}
+
+		& ~ .focusBorder {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: $gray-dark-lab77;
+			transition: 0.4s;
+		}
+		&:focus ~ .focusBorder,
+		&.hasContent ~ .focusBorder {
+			transition: 0.4s;
+			height: 2px;
+			background-color: $primary;
+		}
+
+		& ~ .label {
+			height: $labelHeight;
+			position: absolute;
+			font-size: $input-font-size;
+			left: 0;
+			top: $labelHeight;
+			color: $gray-dark-lab77;
+			cursor: pointer;
+			transition: 0.3s;
+		}
+
+		&:focus ~ .label,
+		&.hasContent ~ .label {
+			font-size: $font-size-sm;
+			top: 0rem;
+			color: $primary;
+			transition: 0.3s;
+		}
+
+		/*
+		* Cores dos status
+		*/
+		&.success ~ .focusBorder {
+			background-color: $success;
+			width: 100%;
+		}
+		&.success ~ .label {
+			color: $success;
+		}
+
+		&.warning ~ .focusBorder {
+			background-color: $warning;
+			width: 100%;
+		}
+		&.warning ~ .label {
+			color: $warning;
+		}
+
+		&.error ~ .focusBorder {
+			background-color: $danger;
+			width: 100%;
+		}
+		&.error ~ .label {
+			color: $danger;
+		}
+	}
+}

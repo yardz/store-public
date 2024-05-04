@@ -1,0 +1,15 @@
+@import '@App/Assets/bootstrap/variables.scss';
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+
+	svg {
+		height: auto;
+		width: 184px;
+		@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+			width: auto;
+		}
+	}
+}

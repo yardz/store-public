@@ -1,0 +1,55 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '@App/Assets/stylesheets/mixins/spacing.scss';
+
+.orderItemLink {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.orderItemSection {
+	background-color: $gray-light-lab77;
+	@include space(margin, bottom, $xs);
+	@include space(padding, all, $sm);
+
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include space(margin, bottom, $xs);
+
+		.order {
+			font-weight: 300;
+			color: $primary;
+			text-transform: uppercase;
+		}
+
+		.date {
+			font-weight: 300;
+			color: $primary;
+			text-transform: uppercase;
+		}
+	}
+
+	.orderItemImage {
+		display: flex;
+		align-items: center;
+		width: 5rem;
+		@include space(margin, bottom, $xs);
+
+		img {
+			@include space(margin, right, $xs);
+		}
+	}
+
+	.footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.price {
+			font-weight: 300;
+			color: $primary;
+			text-transform: uppercase;
+		}
+	}
+}

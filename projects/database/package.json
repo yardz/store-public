@@ -1,0 +1,47 @@
+{
+  "name": "@lab77store/database",
+  "version": "0.8.3",
+  "description": "Pacote com services",
+  "keywords": [],
+  "author": "yardz <wadge.motta@gmail.com>",
+  "license": "ISC",
+  "main": "lib/database.interfaces.js",
+  "repository": "https://github.com/lab77store/store",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prepare": "yarn build",
+    "prebuild": "rm -rf tmp/ lib/ && mkdir tmp/ && mkdir lib",
+    "build": "yarn start && tsc -p tsconfig.build.json",
+    "build:code": "yarn prebuild && yarn bolt && yarn bolt:fix",
+    "install-emulator": "firebase setup:emulators:database",
+    "test": "yarn install-emulator && firebase emulators:exec --only database './integration.test.sh'",
+    "clean": "rm -rf node_modules/ lib/",
+    "bolt:ts": "echo 'export interface Database { };' > src/database.interfaces.ts && ts-node src/gen < src/database.rules.bolt > src/database.interfaces.ts",
+    "bolt:fix": "ts-node src/fix < tmp/database.rules.json > lib/database.rules.json && rm -rf tmp/",
+    "bolt": "firebase-bolt < src/database.rules.bolt > tmp/database.rules.json",
+    "start": "yarn build:code && yarn bolt:ts && ts-node src/auth",
+    "deploy": "firebase deploy --only database",
+    "pre-commit": "",
+    "pre-push": ""
+  },
+  "dependencies": {
+    "@types/get-stdin": "^5.0.1",
+    "@types/lodash": "^4.14.171",
+    "ajv": "^6.6.1",
+    "firebase-bolt": "^0.8.4",
+    "firebase-tools": "^8.20.0",
+    "get-stdin": "^6.0.0",
+    "lodash": "^4.17.21",
+    "prettier": "2.2.1",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.9.7",
+    "typescript-json-schema": "^0.33.0",
+    "typescript-tslint-plugin": "^1.0.1"
+  }
+}

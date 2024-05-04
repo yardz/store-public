@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /*
+Sitemap: https://lab77.com.br/sitemap.xml

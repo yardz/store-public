@@ -1,0 +1,25 @@
+.notFoundBackground {
+	background: #fff;
+	min-height: 100vh;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.notFoundTitle {
+	font-style: normal;
+	font-weight: 300;
+	font-size: 72px;
+}
+
+.notFoundSubTitle {
+	margin-top: 10px;
+	font-size: 20px;
+	margin-bottom: 80px;
+}
+
+.notFoundLogo {
+	margin-bottom: 80px;
+}

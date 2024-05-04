@@ -1,0 +1,14 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import './CheckoutCartItem.module.scss';
+
+.cartItemAttr {
+	@extend .spaceItem;
+	color: $black;
+
+	.cartItemAttrLabel {
+		@extend .marginLabel;
+	}
+	.cartItemAttrValue {
+		font-weight: $font-weight-normal;
+	}
+}

@@ -1,0 +1,10 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.bar {
+	background-color: $gray-dark-lab77;
+	height: 0.3rem;
+
+	&.active {
+		background-color: $green-lab77;
+	}
+}

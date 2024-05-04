@@ -1,0 +1,15 @@
+{
+    "extends": [
+        "react-app"
+    ],
+    "rules": {
+        "no-console": "error",
+        "react/self-closing-comp": [
+            "error",
+            {
+                "component": true,
+                "html": true
+            }
+        ]
+    }
+}

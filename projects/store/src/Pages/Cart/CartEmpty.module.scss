@@ -1,0 +1,18 @@
+.CartEmpty {
+	width: 100%;
+	position: relative;
+
+	.cart {
+		width: 50%;
+		position: absolute;
+		top: 0rem;
+		left: 0rem;
+	}
+	.message {
+		position: relative;
+		max-height: 80vh;
+		margin: 0 auto;
+		display: block;
+		z-index: 1;
+	}
+}

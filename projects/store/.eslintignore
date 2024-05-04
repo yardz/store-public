@@ -1,0 +1,6 @@
+**/node_modules/*
+**/out/*
+**/.next/*
+/public/js/*
+@types/*
+/pages/example.tsx

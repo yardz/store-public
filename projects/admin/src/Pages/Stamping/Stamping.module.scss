@@ -1,0 +1,18 @@
+.totalPacking {
+	margin-top: 15px;
+	margin-bottom: 15px;
+
+	& .rowTotal {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	& .textLabel {
+		width: 150px;
+	}
+
+	& .textValue {
+		width: 50px;
+		text-align: right;
+	}
+}

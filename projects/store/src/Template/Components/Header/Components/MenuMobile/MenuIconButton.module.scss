@@ -1,0 +1,18 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '../../Header.module.scss';
+
+.HeaderMenuMobile {
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #fff;
+	&.open {
+		color: $green-lab77;
+	}
+
+	@media screen and (max-width: map-get($grid-breakpoints, 'lg')) {
+		margin-right: 0.75rem;
+	}
+
+	@extend .menuIcon;
+}

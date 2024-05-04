@@ -1,0 +1,10 @@
+@import '@App/Assets/bootstrap/variables.scss';
+
+.CheckoutResumeAccordion {
+	border-top: 1px solid $gray-dark-lab77;
+	background: $gray-light-lab77;
+	padding: 1rem 0.5rem;
+	.CheckoutResumeAccordionItem {
+		margin-top: 0.25rem;
+	}
+}

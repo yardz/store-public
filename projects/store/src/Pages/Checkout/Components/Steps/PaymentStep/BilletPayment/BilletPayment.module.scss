@@ -1,0 +1,13 @@
+@import '@App/Assets/bootstrap/_variables.scss';
+
+.BilletPayment {
+	.title {
+		margin-bottom: 1rem;
+	}
+
+	.text {
+		padding: 0rem;
+		margin: 0rem 0rem 1.5rem;
+		color: $gray-dark-lab77;
+	}
+}

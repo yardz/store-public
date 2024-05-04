@@ -1,0 +1,64 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '../../Header.module.scss';
+
+.search {
+	.btnSearch {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: transparent;
+		border: none;
+		padding: 0rem;
+
+		&:focus {
+			outline: none;
+		}
+		.icon {
+			@extend .menuIcon;
+
+			color: #ffffff;
+			&.iconActive {
+				color: $green-lab77;
+			}
+		}
+	}
+
+	.searchBar {
+		position: fixed;
+		top: $header-height-mobile;
+		left: 0;
+		width: 100%;
+		display: none;
+
+		@media (min-width: map-get($grid-breakpoints, 'lg')) {
+			top: $header-height-desktop;
+			width: 90%;
+			left: 5%;
+		}
+		z-index: 10000;
+		background: $body-bg;
+		padding: 2px;
+		box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+
+		.searchInput {
+			box-shadow: none;
+			text-align: right;
+			border-color: transparent;
+			color: $gray-dark-lab77;
+		}
+		.searchButton {
+			background: transparent;
+			border-color: $gray-dark-lab77;
+
+			@media (min-width: map-get($grid-breakpoints, 'lg')) {
+				width: 7.75rem;
+			}
+			.icon {
+				color: $gray-dark-lab77;
+			}
+		}
+	}
+	.searchBarOpen {
+		display: block;
+	}
+}

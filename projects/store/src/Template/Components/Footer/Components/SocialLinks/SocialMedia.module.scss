@@ -1,0 +1,7 @@
+@import '@App/Assets/stylesheets/mixins/spacing.scss';
+
+.mediaContent {
+	@include space(margin, all, $xl auto $xl auto);
+	width: 1.5rem;
+	height: 1.5rem;
+}

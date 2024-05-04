@@ -1,0 +1,25 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '@App/Assets/stylesheets/mixins/spacing.scss';
+
+.addressListItemSection {
+	background-color: $gray-light-lab77;
+	@include space(margin, bottom, $sm);
+
+	.itemSectionHeader {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include space(padding, all, $sm);
+		border-bottom: 1px solid $gray-dark-lab77;
+
+		.title {
+			padding: 0rem;
+			margin: 0rem;
+			font-size: $font-size-base;
+		}
+	}
+
+	.content {
+		@include space(padding, all, $sm);
+	}
+}

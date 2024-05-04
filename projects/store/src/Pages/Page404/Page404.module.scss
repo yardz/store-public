@@ -1,0 +1,24 @@
+@import '@App/Assets/bootstrap/variables.scss';
+@import '@App/Assets/stylesheets/mixins/spacing.scss';
+
+.pageNotFoundLogomarca {
+	@include space(margin, bottom, $xxl);
+}
+
+.pageNotFoundSection {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+	background-color: $white;
+
+	h1,
+	h3 {
+		text-align: center;
+	}
+}
+
+.pageNotFoundFooter {
+	@include space(margin, top, $xxl);
+}
